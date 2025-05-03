@@ -1,0 +1,31 @@
+public class HandPhone {
+    String jenis_hp;
+    int tahun_pembuatan;
+
+    // Perbaikan method: Menghilangkan "String" sebelum "public"
+    public void setDataHP(String jenis_hp, int tahun_pembuatan) {
+        this.jenis_hp = jenis_hp;
+        this.tahun_pembuatan = tahun_pembuatan;
+    }
+
+    // Perbaikan method: Harus mengembalikan nilai jenis_hp
+    public String getJenisHP() {
+        return jenis_hp;
+    }
+
+    // Perbaikan method: Harus mengembalikan nilai tahun_pembuatan
+    public int getTahunPembuatan() {
+        return tahun_pembuatan;
+    }
+
+    public static void main(String args[]) {
+        HandPhone hp = new HandPhone();
+        
+        // Memanggil setDataHP dengan data yang valid
+        hp.setDataHP("Samsung", 2022);
+
+        // Menampilkan hasil
+        System.out.println("Jenis HP: " + hp.getJenisHP());
+        System.out.println("Tahun Pembuatan: " + hp.getTahunPembuatan());
+    }
+}
